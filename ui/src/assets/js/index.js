@@ -1,7 +1,7 @@
 import "./index.css";
 import "../css/animate.min.css";
 import "./canvas.js";
-import './click.js';
+import "./click.js";
 import {
   addQipao,
   setPrizes,
@@ -202,7 +202,7 @@ function setLotteryStatus(status = false) {
  * 事件绑定
  */
 function bindEvent() {
-  document.querySelector("#menu").addEventListener("click", function (e) {
+  document.querySelector("#menu").addEventListener("click", function(e) {
     e.stopPropagation();
     // 如果正在抽奖，则禁止一切操作
     if (isLotting) {
@@ -416,9 +416,9 @@ function rotateBall() {
         ROTATE_TIME
       )
       .onUpdate(render)
-      .easing(function (amount) {
-        return amount
-      },)
+      .easing(function(amount) {
+        return amount;
+      })
       .start()
       .onComplete(() => {
         resolve();
@@ -794,8 +794,7 @@ function createHighlight() {
   return highlight;
 }
 
-window.onload = function () {
-
+window.onload = function() {
   let music = document.querySelector("#music");
 
   let rotated = 0,
@@ -803,7 +802,7 @@ window.onload = function () {
     musicBox = document.querySelector("#musicBox");
 
   function animate() {
-    requestAnimationFrame(function () {
+    requestAnimationFrame(function() {
       if (stopAnimate) {
         return;
       }
@@ -816,7 +815,7 @@ window.onload = function () {
 
   musicBox.addEventListener(
     "click",
-    function (e) {
+    function(e) {
       if (music.paused) {
         music.play().then(
           () => {
@@ -835,15 +834,13 @@ window.onload = function () {
     false
   );
 
-  setTimeout(function () {
+  setTimeout(function() {
     musicBox.click();
   }, 1000);
 };
 
-
-
-$(document).on('click','.prize-item',function onPrizeItemClick(){
-  const id= $(this).data('id');
+$(document).on("click", ".prize-item", function onPrizeItemClick() {
+  const id = $(this).data("id");
   currentPrizeIndex = id;
   changePrize();
 });

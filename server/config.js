@@ -57,9 +57,9 @@ const prizes = [
   },
   {
     type: 7,
-    count: 11,
-    text: "六等奖",
-    title: "漫步者蓝牙耳机",
+    count: 55,
+    text: "普天同庆",
+    title: "普天同庆",
     img: "../img/edifier.jpg"
   }
 ];
@@ -72,7 +72,7 @@ const EACH_COUNT = [1, 1, 5, 6, 7, 8, 9, 10];
 /**
  * 卡片公司名称标识
  */
-const COMPANY = "MoShang";
+const COMPANY = "Noxer";
 
 module.exports = {
   prizes,

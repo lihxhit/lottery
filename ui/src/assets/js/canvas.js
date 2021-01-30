@@ -1,4 +1,4 @@
-(function() {
+export function showCanvas() {
   //based on an Example by @curran
   window.requestAnimFrame = (function() {
     return window.requestAnimationFrame;
@@ -21,7 +21,7 @@
   initializeStars();
 
   function executeFrame() {
-    if (animate) requestAnimFrame(executeFrame);
+    if (animate) window.requestAnimFrame(executeFrame);
     moveStars();
     drawStars();
   }
@@ -36,7 +36,7 @@
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         z: Math.random() * canvas.width,
-        o: "0." + Math.floor(Math.random() * 99) + 1
+        o: "0." + Math.floor(Math.random() * 50) + 1
       };
       stars.push(star);
     }
@@ -93,4 +93,4 @@
   // });
 
   executeFrame();
-})();
+}
